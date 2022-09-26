@@ -1,0 +1,19 @@
+/* .header{
+    padding: 15px 0;
+    background-color:whitesmoke;
+} */
+.header-content{
+    padding: 15px 0;
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.address-text{
+    font:normal normal;
+    color: rgb(11, 11, 196);
+}
+.address-payroll{
+    color: green;
+}

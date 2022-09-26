@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="address">
+    <h2 class="t">Address List</h2>
+    <div class="button-ty"> 
+    <button class="btn btn-secondary bt" routerLink="/address-form">add address</button>
+</div>
+</div>
+
+  <div class="container">
+    <table class="content-header">
+        <tr>
+            <th>FullName</th>
+            <th>Mobile No</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>ZipCode</th>
+            <th>Action</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let item of address">
+            <td>{{item.firstName}} </td>
+            <td>{{item.mobileNo}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.state}}</td>
+            <td>{{item.zipNo}}</td>
+            <td>
+                <button  type="submit" class="btn btn-primary me-2"  (click)="edit(item.personId)">edit</button>
+                <button  class="btn btn-danger " (click)="delete(item.personId)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+  </div>

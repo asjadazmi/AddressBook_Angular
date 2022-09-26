@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+  }
+  .content-header{
+    background-color:whitesmoke;
+}
+.button-ty{
+    margin-left: 70%; 
+    
+}
+/* .B{
+    background-color: green;
+    border-radius: 2;
+} */
+
+.address{
+    
+    display: flex;
+    padding: 10px 10px 10px 10px ;
+    
+}
+.t{
+    margin-left:5%;
+}

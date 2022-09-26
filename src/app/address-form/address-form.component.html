@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="address">
+    
+    <div class="button-ty"> 
+    <button class="btn btn-secondary bt" routerLink="/addressbook-display">Address Record</button>
+</div>
+</div>
+
+<div class="form-content">
+    <form class="form" [formGroup]="addressform" (ngSubmit)="onSubmit()">
+        <div class="form-head">
+            <h3 class="al">PERSON ADDRESS FORM</h3>
+        </div>
+        <div class="row-content">
+            <label class="label text" for="name">FullName</label>
+            <input type="text" id="name" size="50" placeholder="enter the full name" formControlName="firstName">
+        </div>
+        <div class="row-content">
+            <label class="label text" for="phone">Phone Number</label>
+            <input type="number" id="phone"  placeholder="enter the phone number..." formControlName="mobileNo">
+        </div>
+        <div class="row-content">
+            <label class="label text" for="address">Address</label>
+            <input type="textarea" style="height:100px" id="address"  placeholder="" formControlName="address">
+        </div>
+        <div class="row mb-3 pd">
+            <div class="form-group col">
+              <label class="txt">City</label>
+              <select class="form-control" formControlName="city">
+                <option value="default">select city</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Bengluru">Bengluru</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Mumbai">Mumbai</option>
+              </select>
+            </div>
+            <div class="form-group col-5">
+                <label class="txt">State</label>
+                <select class="form-control" formControlName="state">
+                  <option value="default">select state</option>
+                  <option value="Bengal">Bengal</option>
+                  <option value="Karnatka">karnatka</option>
+                  <option value="TamilNadu">TamilNadu</option>
+                  <option value="Maharstra">Maharstra</option>
+                </select>
+            </div>
+            <div class="form-group col-5" >
+              <label class="txt">ZipCode</label>
+              <input type="text" class="form-control" formControlName="zipNo">
+            </div>
+          </div>
+          <div class="button-t">
+            <button type="submit" class="btn btn-primary me-2">save</button>
+            <button class="btn btn-danger" (click)="onCancel()">Reset</button>
+          </div>
+        
+          {{addressform.value | json}}
+        
+    </form>
+</div>
+
